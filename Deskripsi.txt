@@ -1,0 +1,5 @@
+kelebihan web:
+kekurangan web:
+1. Belum Bisa Menggunakan Tampilan Hp
+2. Belum Ada Fitur Log-In
+3. Belum Ada Fitur Filter Riwayat

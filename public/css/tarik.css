@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0B1120;
+}
+
+/* SideBar */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #0F172A;
+    border-right: 1px solid #1F2937;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #E5E7EB;
+    margin: 20px 0;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    background-color: rgba(59,130,246,0.1);
+    color: #3B82F6;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #9CA3AF;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #1E293B;
+    color: #E5E7EB;
+}
+
+.menu .active a {
+    background-color: #1E293B;
+    color: #3B82F6;
+}
+
+
+/* Main Content */
+
+.main-content {
+    margin-left: 250px;   /* sesuai lebar sidebar */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: transisi 1.2s;
+}
+
+@keyframes transisi {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* Jumbotron/Hero */
+.hero {
+    background: linear-gradient(135deg, #111827, #0F172A);
+    border: 1px solid #1F2937;
+    border-radius: 18px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #E5E7EB;
+}
+
+.hero p {
+    margin: 10px 0 20px;
+    color: #9CA3AF;
+}
+
+/* Stats Card */
+.stats-card {
+    background-color: #1E293B;
+    padding: 25px 35px;
+    border-radius: 16px;
+    border: 1px solid #1F2937;
+    text-align: right;
+    min-width: 220px;
+}
+
+.stats-card span {
+    font-size: 14px;
+    color: #9CA3AF;
+}
+
+.stats-card h2 {
+    margin: 8px 0 0;
+    font-size: 26px;
+    color: #3B82F6;
+}  
+
+/* Form Transaksi */
+
+.form-card {
+    width: 450px;
+    background-color: #111827;
+    border: 1px solid #1F2937;
+    border-radius: 18px;
+    padding: 35px;
+    color: #E5E7EB;
+}
+
+.form-card h2 {
+    margin: 0 0 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #9CA3AF;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #1F2937;
+    background-color: #0F172A;
+    color: #E5E7EB;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group select {
+    width: 105.5%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #1F2937;
+    background-color: #0F172A;
+    color: #E5E7EB;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #3B82F6;
+}
+
+.btn-primary {
+    margin-top: 10px;
+    background-color: #f63b3b;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #eb2525;
+}
