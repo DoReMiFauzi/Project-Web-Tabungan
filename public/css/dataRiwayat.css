@@ -238,3 +238,14 @@ tbody tr:hover {
 .btn-secondary:hover {
     background-color: #334155;
 }   
+
+.export{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.export h3{
+    padding-right: 20px;
+}

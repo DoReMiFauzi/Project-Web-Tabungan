@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TabunganController;
+use App\Http\Controllers\ExportController;
 
 Route::get('/',[TabunganController::class,'index'])->name('Tabungan.index');
 Route::get('/Tabung-Uang',[TabunganController::class,'create'])->name('Tabungan.create');
@@ -12,5 +13,6 @@ Route::get('/Data-Riwayat',[TabunganController::class,'viewRiwayat'])->name('Tab
 Route::delete('/destroy/{id}',[TabunganController::class,'destroy'])->name('Tabungan.destroy');
 
 
+Route::get('/export',[ExportController::class,'export'])->name('Export.export');
 
 
