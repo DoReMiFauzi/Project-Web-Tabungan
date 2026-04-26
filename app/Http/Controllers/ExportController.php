@@ -22,15 +22,25 @@ class ExportController extends Controller
         $sheet->setCellValue('D1', 'Tanggal');
 
         $row = 2;
+        $totalUang = 0;
 
         foreach ($data as $item){
             $sheet->setCellValue('A'. $row, $item->id);
-            $sheet->setCellValue('B'. $row, $item->nominal);
+            $sheet->setCellValue('B'. $row, 'Rp' . number_format( $item->nominal, 0, ',', '.'));
             $sheet->setCellValue('C'. $row, $item->tipe);
             $sheet->setCellValue('D'. $row, $item->tanggal);
 
+            if ($item->tipe == 'Tabung') {
+                $totalUang += $item->nominal;
+            } elseif ($item->tipe == 'Tarik') {
+                $totalUang -= $item->nominal;
+            }
+
             $row++;
         }
+
+        $sheet->setCellValue('A'. $row, 'Total Saldo');
+        $sheet->setCellValue('B'. $row,'Rp' . number_format($totalUang , 0, ',', '.'));
 
         $writer = new Xlsx($spreadsheet);
         $filename = 'Laporan.Xlsx';
